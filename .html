@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schatten-Kartell Regelwerk</title>
+
+<style>
+
+/* Grundlayout /
+
+body {
+    margin: 0;
+    background: black;
+    font-family: Arial, sans-serif;
+    color: #d4af37;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/ Rauch Effekt /
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255,215,0,0.05), transparent 70%);
+    animation: smoke 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes smoke {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg) translate(40px,40px); }
+    100% { transform: rotate(360deg); }
+}
+
+/ Intro Screen /
+
+#intro {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 4s forwards;
+    animation-delay: 4s;
+}
+
+#introLogo {
+    width: 300px;
+    opacity: 0;
+    animation: logoAppear 2s forwards;
+}
+
+/ Augen /
+
+.eye {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 20px red, 0 0 40px red;
+    opacity: 0;
+    animation: eyeGlow 2s forwards;
+    animation-delay: 2s;
+}
+
+.left { transform: translate(-45px, -10px); }
+.right { transform: translate(45px, -10px); }
+
+@keyframes logoAppear {
+    to { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes eyeGlow {
+    to { opacity: 1; box-shadow: 0 0 40px red, 0 0 80px red; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+/ Navigation /
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    border-bottom: 2px solid gold;
+    padding: 15px;
+    text-align: center;
+    z-index: 10;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 18px;
+    text-shadow: 0 0 10px gold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 20px gold;
+}
+
+/ Container /
+
+.container {
+    max-width: 950px;
+    margin: 120px auto;
+    padding: 40px;
+    background: rgba(0,0,0,0.9);
+    border: 2px solid gold;
+    box-shadow: 0 0 30px gold;
+    border-radius: 10px;
+    position: relative;
+}
+
+/ Wasserzeichen /
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background: url("logo.png") center no-repeat;
+    background-size: contain;
+    transform: translate(-50%,-50%);
+    opacity: 0.05;
+}
+
+/ Texte */
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 0 0 20px gold;
+}
+
+h2 {
+    margin-top: 40px;
+    text-shadow: 0 0 10px gold;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.section {
+    border-left: 3px solid gold;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+p, li {
+    line-height: 1.6;
+    color: #f5d97a;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0.7;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Intro -->
+
+<div id="intro">
+    <img src="logo.png" id="introLogo">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+</div>
+
+<!-- Navigation -->
+
+<nav>
+    <a href="#kodex">Kodex</a>
+    <a href="#regel">Regelkatalog</a>
+    <a href="#sanktion">Sanktionskatalog</a>
+</nav>
+
+<!-- Kodex -->
+
+<div class="container" id="kodex">
+
+<h1>Kodex des Schatten-Kartells</h1>
+
+<div class="section">
+
+<h2>I. Loyalität</h2>
+<p>Die Schatten stehen über allem. Jedes Mitglied schuldet dem Kartell absolute Loyalität. Verrat an den Schatten ist Verrat an der Familie.</p>
+
+<h2>II. Schweigen</h2>
+<p>Was im Schatten geschieht, bleibt im Schatten. Informationen dürfen niemals Außenstehenden preisgegeben werden.</p>
+
+<h2>III. Respekt der Rangordnung</h2>
+<p>Befehle der Führung sind ohne Zögern auszuführen.</p>
+
+<h2>IV. Stärke und Disziplin</h2>
+<p>Unüberlegtes Handeln gefährdet die Familie.</p>
+
+<h2>V. Brüderlichkeit</h2>
+<p>Ein Schatten lässt keinen anderen fallen.</p>
+
+<h2>VI. Ehre</h2>
+<p>Jedes Mitglied repräsentiert das Kartell.</p>
+
+<h2>VII. Urteil der Schatten</h2>
+<p>Verstöße werden von höheren Rängen gerichtet.</p>
+
+</div>
+
+<div class="footer">© Aljem Lalo</div>
+
+</div>
+
+<!-- Regelkatalog -->
+
+<div class="container" id="regel">
+
+<h1>Regelkatalog</h1>
+
+<div class="section">
+
+<h2>Präambel</h2>
+
+<p>Im Schatten entsteht Macht.</p>
+
+<p>Das Schattenkartell ist mehr als eine Organisation – ein Bund aus Loyalität, Disziplin und Verschwiegenheit.</p>
+
+<p>Jedes Mitglied trägt Verantwortung für den Ruf des Kartells.</p>
+
+<h2>Grundprinzipien</h2>
+
+<ul>
+<li>Kodex einhalten</li>
+<li>Gesetz der Stille</li>
+<li>Hierarchie respektieren</li>
+<li>Keine eigenmächtigen Aktionen</li>
+<li>Loyalität und Respekt</li>
+<li>Schutz des Anwesens</li>
+</ul>
+
+</div>
+
+<div class="footer">© Aljem Lalo</div>
+
+</div>
+
+<!-- Sanktionskatalog -->
+
+<div class="container" id="sanktion">
+
+<h1>Sanktionskatalog</h1>
+
+<div class="section">
+
+<h2>Leichte Verstöße</h2>
+
+<ul>
+<li>Nichterscheinen – $55.000</li>
+<li>Nicht im Funk – $25.000</li>
+<li>Funkstörung – $10.000</li>
+<li>Grundloses Töten – $50.000</li>
+<li>Respektlosigkeit – $30.000</li>
+<li>Kleiderordnung – $52.000</li>
+<li>Caller missachten – $32.000</li>
+</ul>
+
+<h2>Mittlere Verstöße</h2>
+
+<ul>
+<li>Schattenrat missachten – Verwarnung + $70.000</li>
+</ul>
+
+<h2>Schwere Verstöße</h2>
+
+<ul>
+<li>Verrat</li>
+<li>Konflikte ohne Freigabe</li>
+<li>3 Verwarnungen = Bloodout</li>
+</ul>
+
+<h2>Zusatzbestimmungen</h2>
+
+<ul>
+<li>72h Zahlungsfrist</li>
+<li>Strafen verdoppeln sich</li>
+<li>14 Tage Verwarnung</li>
+<li>Schattenrat entscheidet</li>
+</ul>
+
+<h2>Eid des Schattens</h2>
+
+<p><b>Wer den Eid bricht, verliert den Schutz der Schatten.</b></p>
+
+</div>
+
+<div class="footer">© Aljem Lalo</div>
+
+</div>
+
+</body>
+</html>
